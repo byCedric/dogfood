@@ -32,3 +32,6 @@ jobs:
 
       - name: ✅ Lint code
         run: pnpm run lint --max-warnings=0
+
+      - name: 🧪 Test code
+        run: pnpm run test --maxWorkers=1
