@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "dogfood",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
@@ -6,7 +7,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint . --ext js,jsx,ts,tsx"
   },
   "dependencies": {
     "expo": "~46.0.16",
@@ -15,7 +17,27 @@
     "react-native": "0.69.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
+    "eslint-config-universe": "^11.1.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
   },
-  "private": true
+  "eslintConfig": {
+    "extends": "universe",
+    "parser": "@typescript-eslint/parser",
+    "ignorePatterns": [
+      "node_modules"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "trailingComma": "es5",
+    "endOfLine": "auto"
+  }
 }
