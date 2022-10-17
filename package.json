@@ -43,7 +43,10 @@
     "parser": "@typescript-eslint/parser",
     "ignorePatterns": [
       "node_modules"
-    ]
+    ],
+    "settings": {
+      "import/ignore": ["react-native"]
+    }
   },
   "jest": {
     "preset": "jest-expo"
